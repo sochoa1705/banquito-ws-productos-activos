@@ -16,7 +16,7 @@ public class LoanProduct {
     @Id
     private String id;
     @Indexed(unique = true)
-    private String uniqueId;
+    private String uniqueKey;
     private String name;
     private String currency;
     private String state;
@@ -35,6 +35,8 @@ public class LoanProduct {
     private Date creationDate;
     private Date lastModifiedDate;
     private Date closedDate;
+    private Amortization amortization;
+    private LoanProductType loanProductType;
 
 
 }
