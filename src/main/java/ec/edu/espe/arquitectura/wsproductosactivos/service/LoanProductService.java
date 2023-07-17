@@ -51,7 +51,11 @@ public class LoanProductService {
     }
 
     public LoanProduct obtainByUniqueKey(String uniqueKey){
-        return this.loanProductRepository.findByUniqueKey(uniqueKey);
+        try{
+            return this.loanProductRepository.findByUniqueKey(uniqueKey);
+        }catch(RuntimeException rte) {
+            throw new RuntimeException("Error al obtener el producto con uniqueKey: " + uniqueKey, rte);
+        }
     }
 
     public LoanProduct obtainByUniqueKeyAndState(String uniqueKey, String state){
