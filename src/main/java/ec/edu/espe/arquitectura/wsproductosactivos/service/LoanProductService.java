@@ -1,6 +1,7 @@
 package ec.edu.espe.arquitectura.wsproductosactivos.service;
 
-import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,14 @@ public class LoanProductService {
         this.loanProductRepository = loanProductRepository;
     }
 
+    public List<LoanProductRS> getAllLoanProduct(){
+        List<LoanProduct> loanProducts = this.loanProductRepository.findAll();
+        List<LoanProductRS> loanProductList = new ArrayList<>();
+        for(LoanProduct loanProduct : loanProducts){
+            loanProductList.add(this.responseLoanProduct(loanProduct));
+        }
+        return loanProductList;
+    }
 
     public LoanProduct transformLoanProductRQ(LoanProductRQ rq){
         LoanProduct loanProduct = LoanProduct
@@ -35,34 +44,56 @@ public class LoanProductService {
         return loanProduct;
     }
 
-    public LoanProductRS responseLoanProduct(LoanProduct rq){
+    public LoanProductRS obtainLoanProductByUniqueKey(String uniqueKey) {
+        try {
+            LoanProduct loanProduct = this.loanProductRepository.findByUniqueKey(uniqueKey);
+            LoanProductRS response = responseLoanProduct(loanProduct);
+            return response;
+        } catch (RuntimeException rte) {
+            throw new RuntimeException("Error al obtener loan product", rte);
+        }
+    }
+
+    public LoanProductRS responseLoanProduct(LoanProduct loanProduct){
         LoanProductRS loanProductRs = LoanProductRS
                 .builder()
-                .name(rq.getName())
-                .currency(rq.getCurrency())
-                .state(rq.getState())
-                .description(rq.getDescription())
-                .applicability(rq.getApplicability())
-                .gracePeriod(rq.getGracePeriod())
-                .fee(rq.getFee())
-                .creationDate(rq.getCreationDate())
+                .name(loanProduct.getName())
+                .currency(loanProduct.getCurrency())
+                .state(loanProduct.getState())
+                .description(loanProduct.getDescription())
+                .applicability(loanProduct.getApplicability())
+                .tranches(loanProduct.getTranches())
+                .gracePeriod(loanProduct.getGracePeriod())
+                .gracePeriodType(loanProduct.getGracePeriodType())
+                .fee(loanProduct.getFee())
+                .redrawBalance(loanProduct.getRedrawBalance())
+                .minInterest(loanProduct.getMinInterest())
+                .maxInterest(loanProduct.getMaxInterest())
+                .penaltyRate(loanProduct.getPenaltyRate())
+                .minPenaltyValue(loanProduct.getMinPenaltyValue())
+                .maxPenaltyValue(loanProduct.getMaxPenaltyValue())
+                .creationDate(loanProduct.getCreationDate())
+                .lastModifiedDate(loanProduct.getLastModifiedDate())
+                .closedDate(loanProduct.getClosedDate())
+                .amortization(loanProduct.getAmortization())
+                .loanProductType(loanProduct.getLoanProductType())
                 .build();
         return loanProductRs;
     }
 
-    public LoanProduct obtainByUniqueKey(String uniqueKey){
-        return this.loanProductRepository.findByUniqueKey(uniqueKey);
+    public LoanProductRS obtainLoanProductByUniqueKeyAndState(String uniqueKey,String state) {
+        try {
+            LoanProduct loanProduct = this.loanProductRepository.findByUniqueKeyAndState(uniqueKey,state);
+            LoanProductRS response = responseLoanProduct(loanProduct);
+            return response;
+        } catch (RuntimeException rte) {
+            throw new RuntimeException("Error al obtener loan product", rte);
+        }
     }
 
     public LoanProduct obtainByUniqueKeyAndState(String uniqueKey, String state){
         return this.loanProductRepository.findByUniqueKeyAndState(uniqueKey,state);
     }
 
-    public LoanProduct obtainByUniqueKeyAndStateBetween(String uniqueKey, String state, BigDecimal minInterest, BigDecimal maxInterest){
-        return this.loanProductRepository.findByUniqueKeyAndStateBetween(uniqueKey, state, minInterest, maxInterest);
-    }
-
-    public LoanProduct obtainAmortizationById(String id){
-        return this.loanProductRepository.findAmortizationById(id);
-    }
+    
 }
