@@ -15,7 +15,7 @@ public class LoanProductRS {
     private String currency;
     private String state;
     private String description;
-    private String applicability;
+    private String aplicability;
     private Integer tranches;
     private Integer gracePeriod;
     private String gracePeriodType;

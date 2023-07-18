@@ -1,0 +1,311 @@
+[{
+  "_id": {
+    "$oid": "64b1a001a3e9df352ecc1115"
+  },
+  "uniqueKey": "bd8a3a089f1",
+  "name": "Línea Crédito Ágil",
+  "currency": "36333.99",
+  "state": "INA",
+  "description": "Vivamus vestibulum sagittis sapien",
+  "aplicability": "CUS",
+  "tranches": 40,
+  "gracePeriod": 273,
+  "gracePeriodType": "pay_interest_only",
+  "fee": 58.3,
+  "redrawBalance": -311.3751824,
+  "minInterest": 12.91,
+  "maxInterest": 949.76,
+  "penaltyRate": 13.8,
+  "minPenaltyValue": 2.81,
+  "maxPenaltyValue": 61.34,
+  "creationDate": {
+    "$date": "2023-06-30T00:00:00.000Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2023-07-11T00:00:00.000Z"
+  },
+  "closedDate": {
+    "$date": "2023-11-02T00:00:00.000Z"
+  },
+  "loanProductType": 
+    {
+      "name": "Línea de crédito",
+      "customerType": "BUS",
+      "superType": "DTE",
+      "temporaryInterest": "MON",
+      "allowBranchTransactions": true,
+      "allowBranchTranches": false,
+      "allowRedraw": true
+    },
+  "amortization": 
+    {
+      "type": "FR",
+      "term": 12,
+      "quote": 250.99,
+      "capital": 1300.41,
+      "tax": 85.02,
+      "pendingBalance": 41.99,
+      "periodUnit": "semanal"
+    }
+  
+},
+{
+  "_id": {
+    "$oid": "64b1a267a3e9df352ecc1116"
+  },
+  "uniqueKey": "bd8a3a089f2",
+  "name": "Préstamo Estudiantil EduFin",
+  "currency": "35854.29",
+  "state": "SUS",
+  "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+  "aplicability": "CUS",
+  "tranches": 25,
+  "gracePeriod": 66,
+  "gracePeriodType": "pay_interest_only",
+  "fee": 39.64,
+  "redrawBalance": 585.01,
+  "minInterest": 79.38,
+  "maxInterest": 608.58,
+  "penaltyRate": 31.54,
+  "minPenaltyValue": 3.03,
+  "maxPenaltyValue": 96.44,
+  "creationDate": {
+    "$date": "2022-12-20T00:00:00.000Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2023-07-11T00:00:00.000Z"
+  },
+  "closedDate": {
+    "$date": "2024-02-17T00:00:00.000Z"
+  },
+  "loanProductType": 
+    {
+      "name": "Préstamo estudiantil",
+      "customerType": "NAT",
+      "superType": "IFR",
+      "temporaryInterest": "MON",
+      "allowBranchTransactions": true,
+      "allowBranchTranches": false,
+      "allowRedraw": true
+    }
+  ,
+  "amortization": 
+    {
+      "type": "AL",
+      "term": 12,
+      "quote": 430.67,
+      "capital": 3500.67,
+      "tax": 85.53,
+      "pendingBalance": 25.13,
+      "periodUnit": "anual"
+    }
+  
+},
+{
+  "_id": {
+    "$oid": "64b1a267a3e9df352ecc1117"
+  },
+  "uniqueKey": "bd8a3a089f3",
+  "name": "Préstamo Consumo Personal",
+  "currency": "33056.29",
+  "state": "ACT",
+  "description": "Nulla mollis molestie lorem",
+  "aplicability": "GCU",
+  "tranches": 30,
+  "gracePeriod": 79,
+  "gracePeriodType": "interest_forgiveness",
+  "fee": 94.62,
+  "redrawBalance": 2374.11,
+  "minInterest": 28.52,
+  "maxInterest": 536.12,
+  "penaltyRate": 15.88,
+  "minPenaltyValue": 12.83,
+  "maxPenaltyValue": 94.42,
+  "creationDate": {
+    "$date": "2022-10-17T00:00:00.000Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2023-07-11T00:00:00.000Z"
+  },
+  "closedDate": {
+    "$date": "2024-04-15T00:00:00.000Z"
+  },
+  "loanProductType": 
+    {
+      "name": "Préstamo consumo",
+      "customerType": "NAT",
+      "superType": "FTE",
+      "temporaryInterest": "MON",
+      "allowBranchTransactions": true,
+      "allowBranchTranches": false,
+      "allowRedraw": true
+    }
+  ,
+  "amortization": 
+    {
+      "type": "FR",
+      "term": 12,
+      "quote": 250.99,
+      "capital": 1300.41,
+      "tax": 85.02,
+      "pendingBalance": 41.99,
+      "periodUnit": "semanal"
+    }
+  
+},
+{
+  "_id": {
+    "$oid": "64b1a302a3e9df352ecc1118"
+  },
+  "uniqueKey": "bd8a3a089f4",
+  "name": "Préstamo Automóvil",
+  "currency": "90133.74",
+  "state": "SUS",
+  "description": "Phasellus in felis",
+  "aplicability": "GCO",
+  "tranches": 81,
+  "gracePeriod": 313,
+  "gracePeriodType": "interest_forgiveness",
+  "fee": 7.84,
+  "redrawBalance": 3607.58,
+  "minInterest": 74.19,
+  "maxInterest": 376.29,
+  "penaltyRate": 18.14,
+  "minPenaltyValue": 24.44,
+  "maxPenaltyValue": 55.77,
+  "creationDate": {
+    "$date": "2023-02-21T00:00:00.000Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2023-07-11T00:00:00.000Z"
+  },
+  "closedDate": {
+    "$date": "2024-04-24T00:00:00.000Z"
+  },
+  "loanProductType": 
+    {
+      "name": "Préstamo automovil",
+      "customerType": "NAT",
+      "superType": "DTE",
+      "temporaryInterest": "MON",
+      "allowBranchTransactions": true,
+      "allowBranchTranches": false,
+      "allowRedraw": true
+    }
+  ,
+  "amortization": [
+    {
+      "type": "FR",
+      "term": 12,
+      "quote": 250.99,
+      "capital": 1300.41,
+      "tax": 85.02,
+      "pendingBalance": 41.99,
+      "periodUnit": "semanal"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64b1a302a3e9df352ecc1119"
+  },
+  "uniqueKey": "bd8a3a089f5",
+  "name": "Línea Crédito ÁgilCash",
+  "currency": "91885.68",
+  "state": "ACT",
+  "description": "In hac habitasse platea dictumst",
+  "aplicability": "GCO",
+  "tranches": 53,
+  "gracePeriod": 364,
+  "gracePeriodType": "none",
+  "fee": 79,
+  "redrawBalance": 139,
+  "minInterest": 96.9,
+  "maxInterest": 146.71,
+  "penaltyRate": 50.83,
+  "minPenaltyValue": 48.84,
+  "maxPenaltyValue": 79.82,
+  "creationDate": {
+    "$date": "2022-12-17T00:00:00.000Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2023-07-11T00:00:00.000Z"
+  },
+  "closedDate": {
+    "$date": "2023-12-06T00:00:00.000Z"
+  },
+  "loanProductType": 
+    {
+      "name": "Línea de crédito",
+      "customerType": "NAT",
+      "superType": "FTE",
+      "temporaryInterest": "MON",
+      "allowBranchTransactions": true,
+      "allowBranchTranches": false,
+      "allowRedraw": true
+    }
+  ,
+  "amortization": 
+    {
+      "type": "AL",
+      "term": 12,
+      "quote": 430.67,
+      "capital": 3500.67,
+      "tax": 85.53,
+      "pendingBalance": 25.13,
+      "periodUnit": "anual"
+    }
+  
+},
+{
+  "_id": {
+    "$oid": "64b1a302a3e9df352ecc1120"
+  },
+  "uniqueKey": "bd8a3a089f6",
+  "name": "Préstamo Comercial",
+  "currency": "56311.45",
+  "state": "SUS",
+  "description": "Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus",
+  "aplicability": "GCO",
+  "tranches": 79,
+  "gracePeriod": 139,
+  "gracePeriodType": "interest_forgiveness",
+  "fee": 4.02,
+  "redrawBalance": 1209.02,
+  "minInterest": 52.08,
+  "maxInterest": 343.84,
+  "penaltyRate": 22.69,
+  "minPenaltyValue": 4.77,
+  "maxPenaltyValue": 55.87,
+  "creationDate": {
+    "$date": "2023-05-01T00:00:00.000Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2023-07-11T00:00:00.000Z"
+  },
+  "closedDate": {
+    "$date": "2024-01-31T00:00:00.000Z"
+  },
+  "loanProductType": 
+    {
+      "name": "Préstamo comercial",
+      "customerType": "BUS",
+      "superType": "FTE",
+      "temporaryInterest": "MON",
+      "allowBranchTransactions": true,
+      "allowBranchTranches": false,
+      "allowRedraw": true
+    }
+  ,
+  "amortization": 
+    {
+      "type": "AL",
+      "term": 12,
+      "quote": 430.67,
+      "capital": 3500.67,
+      "tax": 85.53,
+      "pendingBalance": 25.13,
+      "periodUnit": "anual"
+    }
+  
+}]

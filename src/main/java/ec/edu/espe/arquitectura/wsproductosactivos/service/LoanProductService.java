@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 
 import ec.edu.espe.arquitectura.wsproductosactivos.controller.dto.LoanProductRQ;
 import ec.edu.espe.arquitectura.wsproductosactivos.controller.dto.LoanProductRS;
+import ec.edu.espe.arquitectura.wsproductosactivos.controller.dto.LoanProductTypeRS;
 import ec.edu.espe.arquitectura.wsproductosactivos.model.LoanProduct;
+import ec.edu.espe.arquitectura.wsproductosactivos.model.LoanProductType;
 import ec.edu.espe.arquitectura.wsproductosactivos.repository.LoanProductRepository;
 
 @Service
@@ -36,7 +38,7 @@ public class LoanProductService {
                 .currency(rq.getCurrency())
                 .state(rq.getState())
                 .description(rq.getDescription())
-                .applicability(rq.getApplicability())
+                .aplicability(rq.getApplicability())
                 .gracePeriod(rq.getGracePeriod())
                 .fee(rq.getFee())
                 .creationDate(rq.getCreationDate())
@@ -61,7 +63,7 @@ public class LoanProductService {
                 .currency(loanProduct.getCurrency())
                 .state(loanProduct.getState())
                 .description(loanProduct.getDescription())
-                .applicability(loanProduct.getApplicability())
+                .aplicability(loanProduct.getAplicability())
                 .tranches(loanProduct.getTranches())
                 .gracePeriod(loanProduct.getGracePeriod())
                 .gracePeriodType(loanProduct.getGracePeriodType())
@@ -95,5 +97,31 @@ public class LoanProductService {
         return this.loanProductRepository.findByUniqueKeyAndState(uniqueKey,state);
     }
 
-    
+    public List<LoanProductTypeRS> obtainAllLoanProductTypes(){
+        try{
+            List<LoanProduct> loanProductTypes = this.loanProductRepository.findAllLoanProductTypes();
+            List<LoanProductTypeRS> loanProductTypeRSList = new ArrayList<>();
+            for(LoanProduct productType : loanProductTypes){
+                loanProductTypeRSList.add(this.responseLoanProductType(productType.getLoanProductType()));
+            }
+            return loanProductTypeRSList;
+        }catch (RuntimeException rte){
+            throw new RuntimeException("Error al obtener los tipos de productos",rte);
+        }
+
+    }
+
+    public LoanProductTypeRS responseLoanProductType(LoanProductType loanProductType){
+        LoanProductTypeRS loanProductTypeRs = LoanProductTypeRS
+                .builder()
+                .name(loanProductType.getName())
+                .customerType(loanProductType.getCustomerType())
+                .supertype(loanProductType.getSupertype())
+                .temporaryInterest(loanProductType.getTemporaryInterest())
+                .allowBranchTransaction(loanProductType.getAllowBranchTransaction())
+                .allowTranches(loanProductType.getAllowTranches())
+                .allowRedraw(loanProductType.getAllowRedraw())
+                .build();
+        return loanProductTypeRs;
+    }
 }
