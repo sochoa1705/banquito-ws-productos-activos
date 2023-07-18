@@ -90,6 +90,13 @@ public class LoanProductService {
             return response;
         } catch (RuntimeException rte) {
             throw new RuntimeException("Error al obtener loan product", rte);
+
+    public LoanProduct obtainByUniqueKey(String uniqueKey){
+        try{
+            return this.loanProductRepository.findByUniqueKey(uniqueKey);
+        }catch(RuntimeException rte) {
+            throw new RuntimeException("Error al obtener el producto con uniqueKey: " + uniqueKey, rte);
+
         }
     }
 
