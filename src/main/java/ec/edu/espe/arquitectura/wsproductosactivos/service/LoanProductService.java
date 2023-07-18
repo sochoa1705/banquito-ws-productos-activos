@@ -90,6 +90,8 @@ public class LoanProductService {
             return response;
         } catch (RuntimeException rte) {
             throw new RuntimeException("Error al obtener loan product", rte);
+        }
+    }
 
     public LoanProduct obtainByUniqueKey(String uniqueKey){
         try{
@@ -123,10 +125,10 @@ public class LoanProductService {
                 .builder()
                 .name(loanProductType.getName())
                 .customerType(loanProductType.getCustomerType())
-                .supertype(loanProductType.getSupertype())
+                .superType(loanProductType.getSuperType())
                 .temporaryInterest(loanProductType.getTemporaryInterest())
-                .allowBranchTransaction(loanProductType.getAllowBranchTransaction())
-                .allowTranches(loanProductType.getAllowTranches())
+                .allowBranchTransactions(loanProductType.getAllowBranchTransactions())
+                .allowBranchTranches(loanProductType.getAllowBranchTranches())
                 .allowRedraw(loanProductType.getAllowRedraw())
                 .build();
         return loanProductTypeRs;
