@@ -2,8 +2,9 @@ package ec.edu.espe.arquitectura.wsproductosactivos.repository;
 
 import ec.edu.espe.arquitectura.wsproductosactivos.model.LoanProduct;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 
-import java.math.BigDecimal;
+import java.util.List;
 
 
 
@@ -12,7 +13,9 @@ public interface LoanProductRepository extends MongoRepository<LoanProduct, Stri
 
     LoanProduct findByUniqueKey(String uniqueKey);
     LoanProduct findByUniqueKeyAndState(String uniqueKey, String state);
-    LoanProduct findByUniqueKeyAndStateBetween(String uniqueKey, String state, BigDecimal minInterest, BigDecimal maxInterest);
-    LoanProduct findAmortizationById(String Id);
+    List<LoanProduct> findAll();
+
+    @Query(value = "{}", fields = "{'loanProductType': 1}")
+    List<LoanProduct> findAllLoanProductTypes();
     
 }
