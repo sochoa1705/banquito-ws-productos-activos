@@ -16,3 +16,5 @@ public class Amortization {
     private BigDecimal pendingBalance;
     private String periodUnit;
 }
+
+

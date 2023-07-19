@@ -21,7 +21,7 @@ public class LoanProduct {
     private String currency;
     private String state;
     private String description;
-    private String applicability;
+    private String aplicability;
     private Integer tranches;
     private Integer gracePeriod;
     private String gracePeriodType;
@@ -35,8 +35,7 @@ public class LoanProduct {
     private Date creationDate;
     private Date lastModifiedDate;
     private Date closedDate;
-    private Amortization amortization;
     private LoanProductType loanProductType;
-
+    private Amortization amortization;
 
 }
