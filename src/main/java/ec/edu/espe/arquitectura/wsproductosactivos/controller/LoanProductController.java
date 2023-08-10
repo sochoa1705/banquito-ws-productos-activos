@@ -14,7 +14,6 @@ import ec.edu.espe.arquitectura.wsproductosactivos.service.LoanProductService;
 
 @RestController
 @RequestMapping("/api/v1/loan-product")
-
 public class LoanProductController {
 
     private final LoanProductService service;

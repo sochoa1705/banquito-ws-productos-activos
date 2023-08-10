@@ -6,16 +6,12 @@ import org.springframework.data.mongodb.repository.Query;
 
 import java.util.List;
 
-
-
-
 public interface LoanProductRepository extends MongoRepository<LoanProduct, String> {
 
     LoanProduct findByUniqueKey(String uniqueKey);
     LoanProduct findByUniqueKeyAndState(String uniqueKey, String state);
-    List<LoanProduct> findAll();
 
-    @Query(value = "{}", fields = "{'loanProductType': 1}")
-    List<LoanProduct> findAllLoanProductTypes();
+    @Query(value = "{}", fields = "{loanProductType : 1}")
+    List<LoanProduct> findLoanProductsByLoanProductType();
     
 }
