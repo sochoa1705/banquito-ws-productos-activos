@@ -29,7 +29,7 @@ public class LoanProductRS {
     private Date creationDate;
     private Date lastModifiedDate;
     private Date closedDate;
-    private Amortization amortization;
     private LoanProductType loanProductType;
+    private Amortization amortization;
 
 }

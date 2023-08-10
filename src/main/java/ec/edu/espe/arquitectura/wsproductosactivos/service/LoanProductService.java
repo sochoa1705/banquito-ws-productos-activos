@@ -23,28 +23,14 @@ public class LoanProductService {
     }
 
     public List<LoanProductRS> getAllLoanProduct(){
-        List<LoanProduct> loanProducts = this.loanProductRepository.findAll();
-        List<LoanProductRS> loanProductList = new ArrayList<>();
-        for(LoanProduct loanProduct : loanProducts){
-            loanProductList.add(this.responseLoanProduct(loanProduct));
+        List<LoanProduct> products = this.loanProductRepository.findAll();
+        List<LoanProductRS> productList = new ArrayList<>();
+        for(LoanProduct product : products){
+            productList.add(this.responseLoanProduct(product));
         }
-        return loanProductList;
+        return productList;
     }
 
-    public LoanProduct transformLoanProductRQ(LoanProductRQ rq){
-        LoanProduct loanProduct = LoanProduct
-                .builder()
-                .name(rq.getName())
-                .currency(rq.getCurrency())
-                .state(rq.getState())
-                .description(rq.getDescription())
-                .aplicability(rq.getApplicability())
-                .gracePeriod(rq.getGracePeriod())
-                .fee(rq.getFee())
-                .creationDate(rq.getCreationDate())
-                .build();
-        return loanProduct;
-    }
 
     public LoanProductRS obtainLoanProductByUniqueKey(String uniqueKey) {
         try {
@@ -56,31 +42,31 @@ public class LoanProductService {
         }
     }
 
-    public LoanProductRS responseLoanProduct(LoanProduct loanProduct){
-        LoanProductRS loanProductRs = LoanProductRS
+    public LoanProductRS responseLoanProduct(LoanProduct rq){
+        LoanProductRS response = LoanProductRS
                 .builder()
-                .name(loanProduct.getName())
-                .currency(loanProduct.getCurrency())
-                .state(loanProduct.getState())
-                .description(loanProduct.getDescription())
-                .aplicability(loanProduct.getAplicability())
-                .tranches(loanProduct.getTranches())
-                .gracePeriod(loanProduct.getGracePeriod())
-                .gracePeriodType(loanProduct.getGracePeriodType())
-                .fee(loanProduct.getFee())
-                .redrawBalance(loanProduct.getRedrawBalance())
-                .minInterest(loanProduct.getMinInterest())
-                .maxInterest(loanProduct.getMaxInterest())
-                .penaltyRate(loanProduct.getPenaltyRate())
-                .minPenaltyValue(loanProduct.getMinPenaltyValue())
-                .maxPenaltyValue(loanProduct.getMaxPenaltyValue())
-                .creationDate(loanProduct.getCreationDate())
-                .lastModifiedDate(loanProduct.getLastModifiedDate())
-                .closedDate(loanProduct.getClosedDate())
-                .amortization(loanProduct.getAmortization())
-                .loanProductType(loanProduct.getLoanProductType())
+                .name(rq.getName())
+                .currency(rq.getCurrency())
+                .state(rq.getState())
+                .description(rq.getDescription())
+                .aplicability(rq.getAplicability())
+                .tranches(rq.getTranches())
+                .gracePeriod(rq.getGracePeriod())
+                .gracePeriodType(rq.getGracePeriodType())
+                .fee(rq.getFee())
+                .redrawBalance(rq.getRedrawBalance())
+                .minInterest(rq.getMinInterest())
+                .maxInterest(rq.getMaxInterest())
+                .penaltyRate(rq.getPenaltyRate())
+                .minPenaltyValue(rq.getMinPenaltyValue())
+                .maxPenaltyValue(rq.getMaxPenaltyValue())
+                .creationDate(rq.getCreationDate())
+                .lastModifiedDate(rq.getLastModifiedDate())
+                .closedDate(rq.getClosedDate())
+                .loanProductType(rq.getLoanProductType())
+                .amortization(rq.getAmortization())
                 .build();
-        return loanProductRs;
+        return response;
     }
 
     public LoanProductRS obtainLoanProductByUniqueKeyAndState(String uniqueKey,String state) {
@@ -108,7 +94,7 @@ public class LoanProductService {
 
     public List<LoanProductTypeRS> obtainAllLoanProductTypes(){
         try{
-            List<LoanProduct> loanProductTypes = this.loanProductRepository.findAllLoanProductTypes();
+            List<LoanProduct> loanProductTypes = this.loanProductRepository.findLoanProductsByLoanProductType();
             List<LoanProductTypeRS> loanProductTypeRSList = new ArrayList<>();
             for(LoanProduct productType : loanProductTypes){
                 loanProductTypeRSList.add(this.responseLoanProductType(productType.getLoanProductType()));
