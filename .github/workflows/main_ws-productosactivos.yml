@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'ws-productosactivos'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2ECF74FA811E416CBDFB9420981BB6F7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_42FFA12B77124086886C7814B85FD038 }}
           package: '*.jar'
