@@ -31,9 +31,6 @@ public class LoanProductServiceTest {
     @InjectMocks
     private LoanProductService loanProductService;
 
-    private LoanProduct mockLoanProduct;
-    private LoanProductType mockLoanProductType;
-    private Amortization mockAmortization;
 
     @BeforeEach
     public void setup() {
