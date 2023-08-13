@@ -1,9 +1,13 @@
 package ec.edu.espe.arquitectura.wsproductosactivos.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class LoanProductType {
     private String name;

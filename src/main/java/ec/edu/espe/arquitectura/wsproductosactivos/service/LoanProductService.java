@@ -42,32 +42,6 @@ public class LoanProductService {
         }
     }
 
-    public LoanProductRS responseLoanProduct(LoanProduct rq){
-        LoanProductRS response = LoanProductRS
-                .builder()
-                .name(rq.getName())
-                .currency(rq.getCurrency())
-                .state(rq.getState())
-                .description(rq.getDescription())
-                .aplicability(rq.getAplicability())
-                .tranches(rq.getTranches())
-                .gracePeriod(rq.getGracePeriod())
-                .gracePeriodType(rq.getGracePeriodType())
-                .fee(rq.getFee())
-                .redrawBalance(rq.getRedrawBalance())
-                .minInterest(rq.getMinInterest())
-                .maxInterest(rq.getMaxInterest())
-                .penaltyRate(rq.getPenaltyRate())
-                .minPenaltyValue(rq.getMinPenaltyValue())
-                .maxPenaltyValue(rq.getMaxPenaltyValue())
-                .creationDate(rq.getCreationDate())
-                .lastModifiedDate(rq.getLastModifiedDate())
-                .closedDate(rq.getClosedDate())
-                .loanProductType(rq.getLoanProductType())
-                .amortization(rq.getAmortization())
-                .build();
-        return response;
-    }
 
     public LoanProductRS obtainLoanProductByUniqueKeyAndState(String uniqueKey,String state) {
         try {
@@ -79,18 +53,6 @@ public class LoanProductService {
         }
     }
 
-    public LoanProduct obtainByUniqueKey(String uniqueKey){
-        try{
-            return this.loanProductRepository.findByUniqueKey(uniqueKey);
-        }catch(RuntimeException rte) {
-            throw new RuntimeException("Error al obtener el producto con uniqueKey: " + uniqueKey, rte);
-
-        }
-    }
-
-    public LoanProduct obtainByUniqueKeyAndState(String uniqueKey, String state){
-        return this.loanProductRepository.findByUniqueKeyAndState(uniqueKey,state);
-    }
 
     public List<LoanProductTypeRS> obtainAllLoanProductTypes(){
         try{
@@ -118,5 +80,31 @@ public class LoanProductService {
                 .allowRedraw(loanProductType.getAllowRedraw())
                 .build();
         return loanProductTypeRs;
+    }
+    public LoanProductRS responseLoanProduct(LoanProduct rq){
+        LoanProductRS response = LoanProductRS
+                .builder()
+                .name(rq.getName())
+                .currency(rq.getCurrency())
+                .state(rq.getState())
+                .description(rq.getDescription())
+                .aplicability(rq.getAplicability())
+                .tranches(rq.getTranches())
+                .gracePeriod(rq.getGracePeriod())
+                .gracePeriodType(rq.getGracePeriodType())
+                .fee(rq.getFee())
+                .redrawBalance(rq.getRedrawBalance())
+                .minInterest(rq.getMinInterest())
+                .maxInterest(rq.getMaxInterest())
+                .penaltyRate(rq.getPenaltyRate())
+                .minPenaltyValue(rq.getMinPenaltyValue())
+                .maxPenaltyValue(rq.getMaxPenaltyValue())
+                .creationDate(rq.getCreationDate())
+                .lastModifiedDate(rq.getLastModifiedDate())
+                .closedDate(rq.getClosedDate())
+                .loanProductType(rq.getLoanProductType())
+                .amortization(rq.getAmortization())
+                .build();
+        return response;
     }
 }
