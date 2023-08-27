@@ -20,6 +20,12 @@ public class LoanProductController {
         this.service = service;
     }
 
+    @GetMapping("/name/{uniqueKey}")
+    public ResponseEntity<String> obtainProductNameByUniqueKey(@PathVariable("uniqueKey") String uniqueKey) {
+        String name = this.service.obtainProductNameByUniqueKey(uniqueKey);
+        return ResponseEntity.ok(name);
+    }
+
 
     @GetMapping("/{uniqueKey}/{state}")
     public ResponseEntity<LoanProductRS> obtainByUnqueKeyAndState(@PathVariable("uniqueKey") String uniqueKey,

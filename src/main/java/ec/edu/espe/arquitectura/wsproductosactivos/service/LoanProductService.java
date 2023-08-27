@@ -31,7 +31,14 @@ public class LoanProductService {
         return productList;
     }
 
-
+    public String obtainProductNameByUniqueKey(String uniqueKey) {
+        try {
+            LoanProduct product = this.loanProductRepository.findByUniqueKey(uniqueKey);
+            return product.getName();
+        } catch (RuntimeException rte) {
+            throw new RuntimeException("Error al obtener loan product", rte);
+        }
+    }
     public LoanProductRS obtainLoanProductByUniqueKey(String uniqueKey) {
         try {
             LoanProduct loanProduct = this.loanProductRepository.findByUniqueKey(uniqueKey);
