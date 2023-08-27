@@ -1,0 +1,5 @@
+# Created at 2023-08-27T11:48:43.616
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

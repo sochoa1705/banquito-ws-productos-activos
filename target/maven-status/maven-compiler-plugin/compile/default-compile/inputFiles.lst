@@ -1,12 +1,12 @@
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\model\LoanProductType.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\dto\LoanProductRQ.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\model\Amortization.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\dto\LoanProductRS.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\config\MongoConfig.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\dto\LoanProductTypeRS.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\service\LoanProductService.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\model\LoanProduct.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\dto\AmortizationRS.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\repository\LoanProductRepository.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\LoanProductController.java
-c:\Users\Admin\Documents\GitHub\PaginaWeb\myfirstreactapp\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\WsProductosActivosApplication.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\dto\LoanProductRQ.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\WsProductosActivosApplication.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\dto\LoanProductTypeRS.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\service\LoanProductService.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\model\LoanProductType.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\config\MongoConfig.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\model\LoanProduct.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\dto\LoanProductRS.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\repository\LoanProductRepository.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\dto\AmortizationRS.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\model\Amortization.java
+D:\Documentos\ESPE\Arquitectura de Software\productos-activos-new\banquito-ws-productos-activos\src\main\java\ec\edu\espe\arquitectura\wsproductosactivos\controller\LoanProductController.java
